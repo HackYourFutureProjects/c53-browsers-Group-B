@@ -11,50 +11,142 @@
 
 export const quizData = {
   currentQuestionIndex: 0,
-  // the questions in the quiz
   questions: [
     {
-      text: 'What are the different ways to declare a JS variable?',
+      text: 'Which city is considered the most beautiful in the Netherlands?',
       answers: {
-        a: 'constant, let, variable',
-        b: 'var, const, let, function',
-        c: 'var, let, const',
-      },
-      correct: 'c',
-      selected: null,
-      links: [
-        {
-          text: 'javascript.info',
-          href: 'https://javascript.info/variables',
-        },
-        {
-          text: 'Tyler McGinnis',
-          href: 'https://ui.dev/var-let-const/',
-        },
-      ],
-    },
-    {
-      text: 'What does `typeof` do?',
-      answers: {
-        a: 'changes the type of a primitive value',
-        b: 'returns a string describing the type of a value',
-        c: 'determines if a value is primitive',
-        d: 'can tell the difference between arrays and objects',
+        a: 'Rotterdam',
+        b: 'Amsterdam',
+        c: 'Utrecht',
+        d: 'The Hague',
       },
       correct: 'b',
       selected: null,
-      links: [
-        {
-          text: 'javascript.info',
-          href: 'https://javascript.info/types#type-typeof',
-        },
-        {
-          text: 'MDN',
-          href:
-            'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/typeof',
-        },
-      ],
     },
-    // Add more questions here
+    {
+      text: 'In which city can you find the famous "dancing houses"?',
+      answers: {
+        a: 'Haarlem',
+        b: 'Amsterdam',
+        c: 'Eindhoven',
+        d: 'The Groningen',
+      },
+      correct: 'b',
+      selected: null,
+    },
+    {
+      text: 'What is the most popular traditional Dutch dish?',
+      answers: {
+        a: 'Herring with onions',
+        b: 'Fries with mayonnaise',
+        c: 'Stroopwafel (syrup waffles)',
+        d: 'Bitterballen (fried meatballs)',
+      },
+      correct: 'c',
+      selected: null,
+    },
+    {
+      text:
+        'Which city is called the "city of the future" because of its modern architecture?',
+      answers: {
+        a: 'Maastricht',
+        b: 'Rotterdam',
+        c: 'Leiden',
+        d: 'Delft',
+      },
+      correct: 'b',
+      selected: null,
+    },
+    {
+      text: 'What is the most popular Dutch supermarket chain?',
+      answers: {
+        a: 'Jumbo',
+        b: 'Albert Heijn',
+        c: 'Lidl',
+        d: 'Dirk',
+      },
+      correct: 'b',
+      selected: null,
+    },
+    {
+      text:
+        'Which city is the political capital of the Netherlands, where the government is located?',
+      answers: {
+        a: 'Amsterdam',
+        b: 'Rotterdam',
+        c: 'Utrecht',
+        d: 'The Hague',
+      },
+      correct: 'd',
+      selected: null,
+    },
+    {
+      text: 'What is the most popular means of transport among locals?',
+      answers: {
+        a: 'Bicycles',
+        b: 'Buses',
+        c: 'Electric scooters',
+        d: 'Cars',
+      },
+      correct: 'a',
+      selected: null,
+    },
+    {
+      text: 'What is the name of the famous tulip park that opens in spring?',
+      answers: {
+        a: 'Keukenhof',
+        b: 'Vondelpark',
+        c: 'Hoge Veluwe',
+        d: 'Giethoorn',
+      },
+      correct: 'a',
+      selected: null,
+    },
+    {
+      text: 'Which of these cheeses are originally from the Netherlands?',
+      answers: {
+        a: 'Cheddar',
+        b: 'Limburger',
+        c: 'Gouda',
+        d: 'Parmesan',
+      },
+      correct: 'c',
+      selected: null,
+    },
+    {
+      text:
+        'Which Dutch city is famous for its canals and is often called "Little Amsterdam"?',
+      answers: {
+        a: 'Utrecht',
+        b: 'Haarlem',
+        c: 'Leiden',
+        d: 'Maastricht',
+      },
+      correct: 'c',
+      selected: null,
+    },
+    {
+      text: 'Which Dutch airport is one of the largest in Europe?',
+      answers: {
+        a: 'Schiphol',
+        b: 'Eindhoven',
+        c: 'Rotterdam',
+        d: 'Maastricht',
+      },
+      correct: 'a',
+      selected: null,
+    },
+    {
+      text:
+        'Which holiday is celebrated in the Netherlands on April 27, when everyone wears orange?',
+      answers: {
+        a: 'Independence Day',
+        b: 'Amsterdam Day',
+        c: 'Tulip Day',
+        d: "King's Day",
+      },
+      correct: 'd',
+      selected: null,
+    },
   ],
 };
