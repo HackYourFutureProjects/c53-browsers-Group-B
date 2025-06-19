@@ -15,3 +15,16 @@
 ul {
   list-style: none;
 }
+
+/* Correct and wrong answer styles */
+.correct {
+  background-color: #4caf50 !important; /* green */
+  color: white;
+  border-color: #4caf50 !important;
+}
+
+.wrong {
+  background-color: #f44336 !important; /* red */
+  color: white;
+  border-color: #f44336 !important;
+}

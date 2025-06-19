@@ -12,4 +12,3 @@ export const NEXT_QUESTION_BUTTON_ID = 'next-question-button';
 
 export let CURRENT_QUESTION_NUM = 0;
 export let QUESTIONS_QTY = 0; // The total number of quiz questions (questions in the current round, if implemented)
-export let CORRECT_ANSWERS_QTY = 0; // In the quiz (questions in the current round, if implemented)
