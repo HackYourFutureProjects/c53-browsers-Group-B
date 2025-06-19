@@ -22,6 +22,7 @@ export const initFinalResultPage = () => {
     .getElementById('restart-quiz-button')
     .addEventListener('click', () => {
       quizData.currentQuestionIndex = 0;
+      quizData.score = 0;
       quizData.questions.forEach((q) => (q.selected = null));
       initWelcomePage();
     });
