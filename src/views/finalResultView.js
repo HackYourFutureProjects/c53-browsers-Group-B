@@ -9,6 +9,7 @@ export const createFinalResultElement = (score, total) => {
   element.innerHTML = String.raw`
     <h1>Quiz Completed</h1>
     <p>You scored ${score} out of ${total}</p>
-    <button id="restart-quiz-button">Restart Quiz<button>`;
+    <button id="restart-quiz-button">Restart Quiz</button>
+`;
   return element;
 };

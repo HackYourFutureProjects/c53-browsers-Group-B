@@ -17,7 +17,7 @@ function setStatusClass(element, correct) {
   }
 }
 
-function selectAnswer(e) {
+function selectAnswer(e, answersListElement) {
   const selectedAnswer = e.target;
   const correct = selectedAnswer.parentElement.dataset.correct === 'true';
   quizData.questions[quizData.currentQuestionIndex].selected =
@@ -26,6 +26,16 @@ function selectAnswer(e) {
     quizData.score++;
   }
   setStatusClass(selectedAnswer, correct);
+
+  // Disable all buttons after selection
+  Array.from(answersListElement.children).forEach((listItem) => {
+    const button = listItem.children[0];
+    button.disabled = true;
+    // Apply the .correct CSS class to the only button regardless of the user's choice
+    if (listItem.dataset.correct === 'true') {
+      setStatusClass(button, true);
+    }
+  });
 
   const scoreDisplay = document.getElementById(SCORE_DISPLAY_ID);
   if (scoreDisplay) {
@@ -51,13 +61,15 @@ export const initQuestionPage = () => {
 
   for (const [key, answerText] of Object.entries(currentQuestion.answers)) {
     const answerElement = createAnswerElement(key, answerText);
-    // Setting the attribute correct/incorrect answer to each buttton(list element)
+    // Setting the attribute correct/incorrect answer to each button (list element)
     if (key === currentQuestion.correct) {
       answerElement.dataset.correct = true;
     } else {
       answerElement.dataset.correct = false;
     }
-    answerElement.addEventListener('click', selectAnswer);
+    answerElement.addEventListener('click', (e) =>
+      selectAnswer(e, answersListElement)
+    );
 
     answersListElement.appendChild(answerElement);
   }
