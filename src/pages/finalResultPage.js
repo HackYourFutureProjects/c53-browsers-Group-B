@@ -4,22 +4,25 @@ import { initWelcomePage } from './welcomePage.js';
 import { quizData } from '../data.js';
 
 export const initFinalResultPage = () => {
-const userInterface = document.getElementById(USER_INTERFACE_ID);
-userInterface.innerHTML = '';
+  const userInterface = document.getElementById(USER_INTERFACE_ID);
+  userInterface.innerHTML = '';
 
-const totalQuestions = quizData.questions.length;
-const correctAnswers = quizData.questions.filter(
+  const totalQuestions = quizData.questions.length;
+  const correctAnswers = quizData.questions.filter(
     (q) => q.selected === q.correct
-).length;
+  ).length;
 
-const finalResultElement = createFinalResultElement(correctAnswers, totalQuestions);
-userInterface.appendChild(finalResultElement);
+  const finalResultElement = createFinalResultElement(
+    correctAnswers,
+    totalQuestions
+  );
+  userInterface.appendChild(finalResultElement);
 
-document
+  document
     .getElementById('restart-quiz-button')
     .addEventListener('click', () => {
-    quizData.currentQuestionIndex = 0;
-    quizData.questions.forEach((q) => (q.selected = null));
-    initWelcomePage();
+      quizData.currentQuestionIndex = 0;
+      quizData.questions.forEach((q) => (q.selected = null));
+      initWelcomePage();
     });
 };

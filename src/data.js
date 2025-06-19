@@ -11,6 +11,7 @@
 
 export const quizData = {
   currentQuestionIndex: 0,
+  score: 0,
   questions: [
     {
       text: 'Which city is considered the most beautiful in the Netherlands?',
