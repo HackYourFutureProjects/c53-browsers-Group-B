@@ -6,6 +6,24 @@ import {
 import { createQuestionElement } from '../views/questionView.js';
 import { createAnswerElement } from '../views/answerView.js';
 import { quizData } from '../data.js';
+let CORRECT_ANSWERS_QTY = 0; // In the quiz (questions in the current round, if implemented)
+
+function setStatusClass(element, correct) {
+  if (correct) {
+    element.classList.add('correct');
+  } else {
+    element.classList.add('wrong');
+  }
+}
+
+function selectAnswer(e) {
+  const selectedAnswer = e.target;
+  const correct = selectedAnswer.parentElement.dataset.correct === 'true';
+  if (correct) {
+    CORRECT_ANSWERS_QTY++;
+  }
+  setStatusClass(selectedAnswer, correct);
+}
 
 export const initQuestionPage = () => {
   const userInterface = document.getElementById(USER_INTERFACE_ID);
@@ -21,6 +39,14 @@ export const initQuestionPage = () => {
 
   for (const [key, answerText] of Object.entries(currentQuestion.answers)) {
     const answerElement = createAnswerElement(key, answerText);
+    // Setting the attribute correct/incorrect answer to each buttton(list element)
+    if (key === currentQuestion.correct) {
+      answerElement.dataset.correct = true;
+    } else {
+      answerElement.dataset.correct = false;
+    }
+    answerElement.addEventListener('click', selectAnswer);
+
     answersListElement.appendChild(answerElement);
   }
 
