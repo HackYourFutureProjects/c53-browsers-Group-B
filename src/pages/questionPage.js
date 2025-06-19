@@ -6,6 +6,8 @@ import {
 import { createQuestionElement } from '../views/questionView.js';
 import { createAnswerElement } from '../views/answerView.js';
 import { quizData } from '../data.js';
+import { initFinalResultPage } from './finalResultPage.js'; //  Import final result page
+
 let CORRECT_ANSWERS_QTY = 0; // In the quiz (questions in the current round, if implemented)
 
 function setStatusClass(element, correct) {
@@ -56,7 +58,11 @@ export const initQuestionPage = () => {
 };
 
 const nextQuestion = () => {
-  quizData.currentQuestionIndex = quizData.currentQuestionIndex + 1;
+  quizData.currentQuestionIndex++;
 
-  initQuestionPage();
+  if (quizData.currentQuestionIndex >= quizData.questions.length) {
+    initFinalResultPage(); // Show results when finished
+  } else {
+    initQuestionPage(); // Go to next question
+  }
 };
