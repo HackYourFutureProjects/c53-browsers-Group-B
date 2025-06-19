@@ -19,7 +19,8 @@ function setStatusClass(element, correct) {
 function selectAnswer(e) {
   const selectedAnswer = e.target;
   const correct = selectedAnswer.parentElement.dataset.correct === 'true';
-  quizData.questions.selected = selectedAnswer.id;
+  quizData.questions[quizData.currentQuestionIndex].selected =
+    selectedAnswer.id;
   if (correct) {
     quizData.score++;
   }
