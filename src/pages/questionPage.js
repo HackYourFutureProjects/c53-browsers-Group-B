@@ -6,6 +6,7 @@ import {
 import { createQuestionElement } from '../views/questionView.js';
 import { createAnswerElement } from '../views/answerView.js';
 import { quizData } from '../data.js';
+import { initFinalResultPage } from './finalResultPage.js'; // Import final result page
 
 export const initQuestionPage = () => {
   const userInterface = document.getElementById(USER_INTERFACE_ID);
@@ -30,7 +31,11 @@ export const initQuestionPage = () => {
 };
 
 const nextQuestion = () => {
-  quizData.currentQuestionIndex = quizData.currentQuestionIndex + 1;
+  quizData.currentQuestionIndex++;
 
-  initQuestionPage();
+  if (quizData.currentQuestionIndex >= quizData.questions.length) {
+    initFinalResultPage(); // Show results when finished
+  } else {
+    initQuestionPage(); // Go to next question
+  }
 };
