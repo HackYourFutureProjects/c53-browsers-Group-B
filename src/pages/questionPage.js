@@ -6,7 +6,7 @@ import {
 import { createQuestionElement } from '../views/questionView.js';
 import { createAnswerElement } from '../views/answerView.js';
 import { quizData } from '../data.js';
-import { initFinalResultPage } from './finalResultPage.js'; // Import final result page
+import { initFinalResultPage } from './finalResultPage.js'; //  Import final result page
 
 let CORRECT_ANSWERS_QTY = 0; // In the quiz (questions in the current round, if implemented)
 
