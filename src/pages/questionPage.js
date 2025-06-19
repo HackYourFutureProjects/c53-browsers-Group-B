@@ -2,11 +2,13 @@ import {
   ANSWERS_LIST_ID,
   NEXT_QUESTION_BUTTON_ID,
   USER_INTERFACE_ID,
+  SCORE_DISPLAY_ID,
 } from '../constants.js';
 import { createQuestionElement } from '../views/questionView.js';
 import { createAnswerElement } from '../views/answerView.js';
 import { quizData } from '../data.js';
 import { initFinalResultPage } from './finalResultPage.js'; //  Import final result page
+
 
 function setStatusClass(element, correct) {
   if (correct) {
@@ -25,7 +27,14 @@ function selectAnswer(e) {
     quizData.score++;
   }
   setStatusClass(selectedAnswer, correct);
+
+  const scoreDisplay = document.getElementById(SCORE_DISPLAY_ID)
+if (scoreDisplay) {
+  scoreDisplay.textContent = `Score: ${quizData.score}`
 }
+}
+
+
 
 export const initQuestionPage = () => {
   const userInterface = document.getElementById(USER_INTERFACE_ID);
@@ -33,7 +42,8 @@ export const initQuestionPage = () => {
 
   const currentQuestion = quizData.questions[quizData.currentQuestionIndex];
 
-  const questionElement = createQuestionElement(currentQuestion.text);
+  // Create a question element, passing the current score
+  const questionElement = createQuestionElement(currentQuestion.text, quizData.score);
 
   userInterface.appendChild(questionElement);
 
