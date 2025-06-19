@@ -8,8 +8,6 @@ import { createAnswerElement } from '../views/answerView.js';
 import { quizData } from '../data.js';
 import { initFinalResultPage } from './finalResultPage.js'; //  Import final result page
 
-let CORRECT_ANSWERS_QTY = 0; // In the quiz (questions in the current round, if implemented)
-
 function setStatusClass(element, correct) {
   if (correct) {
     element.classList.add('correct');
@@ -21,8 +19,9 @@ function setStatusClass(element, correct) {
 function selectAnswer(e) {
   const selectedAnswer = e.target;
   const correct = selectedAnswer.parentElement.dataset.correct === 'true';
+  quizData.selected = selectedAnswer.id;
   if (correct) {
-    CORRECT_ANSWERS_QTY++;
+    quizData.score++;
   }
   setStatusClass(selectedAnswer, correct);
 }
