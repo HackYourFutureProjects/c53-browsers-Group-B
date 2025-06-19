@@ -25,6 +25,16 @@ function selectAnswer(e) {
     quizData.score++;
   }
   setStatusClass(selectedAnswer, correct);
+
+  // Disable all buttons after selection
+  Array.from(answersListElement.children).forEach((listItem) => {
+    button = listItem.children[0];
+    console.log(button);
+    button.disabled = true;
+    if (button.dataset.correct === 'true') {
+      setStatusClass(button, true);
+    }
+  });
 }
 
 export const initQuestionPage = () => {
