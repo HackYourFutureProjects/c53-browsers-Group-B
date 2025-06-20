@@ -65,7 +65,7 @@ export const initQuestionPage = () => {
 
   for (const [key, answerText] of Object.entries(currentQuestion.answers)) {
     const answerElement = createAnswerElement(key, answerText);
-    // Setting the attribute correct/incorrect answer to each button (list element)
+    // Setting the attribute correct/incorrect answer to each button(list element)
     if (key === currentQuestion.correct) {
       answerElement.dataset.correct = true;
     } else {

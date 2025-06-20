@@ -25,7 +25,7 @@ export const initFinalResultPage = () => {
       quizData.currentQuestionIndex = 0;
       quizData.score = 0;
       quizData.questions.forEach((q) => (q.selected = null));
-      clearQuizProgress();
+      clearQuizProgress(); // Clear saved progress
       initWelcomePage();
     });
 };

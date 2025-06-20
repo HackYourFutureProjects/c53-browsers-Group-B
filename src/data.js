@@ -165,5 +165,5 @@ export const loadQuizProgress = () => {
 };
 
 export const clearQuizProgress = () => {
-  localStorage.removeItem(STORAGE_KEY);
+  localStorage.removeItem(STORAGE_KEY); // Clear saved progress
 };
