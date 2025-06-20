@@ -52,7 +52,8 @@ export const initQuestionPage = () => {
   // Create a question element, passing the current score
   const questionElement = createQuestionElement(
     currentQuestion.text,
-    quizData.score
+    quizData.score,
+    quizData.currentQuestionIndex + 1
   );
 
   userInterface.appendChild(questionElement);
