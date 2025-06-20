@@ -15,6 +15,7 @@ export const quizData = {
   questions: [
     {
       text: 'Which city is considered the most beautiful in the Netherlands?',
+      image: "images/1.jpg",
       answers: {
         a: 'Rotterdam',
         b: 'Amsterdam',
@@ -37,6 +38,7 @@ export const quizData = {
     },
     {
       text: 'What is the most popular traditional Dutch dish?',
+      
       answers: {
         a: 'Herring with onions',
         b: 'Fries with mayonnaise',

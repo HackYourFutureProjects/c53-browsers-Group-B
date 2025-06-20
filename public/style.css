@@ -28,3 +28,30 @@ ul {
   color: white;
   border-color: #f44336 !important;
 }
+
+.question-wrapper{
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+}
+
+.question-left{
+  flex: 1;
+}
+
+.question-right{
+  flex: 2;
+}
+
+.question-left img{
+  max-width: 100%;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.question-image{
+  max-width: 100%;
+  height: auto;
+  margin: 10px 0;
+  border-radius: 10px;
+}
