@@ -15,7 +15,7 @@ export const quizData = {
   questions: [
     {
       text: 'Which city is considered the most beautiful in the Netherlands?',
-      image: "images/1.jpg",
+      image: '/images/0.jpg',
       answers: {
         a: 'Rotterdam',
         b: 'Amsterdam',
@@ -27,6 +27,7 @@ export const quizData = {
     },
     {
       text: 'In which city can you find the famous "dancing houses"?',
+      image: '/images/1.jpg',
       answers: {
         a: 'Haarlem',
         b: 'Amsterdam',
@@ -38,7 +39,7 @@ export const quizData = {
     },
     {
       text: 'What is the most popular traditional Dutch dish?',
-      
+      image: '/images/2.jpg',
       answers: {
         a: 'Herring with onions',
         b: 'Fries with mayonnaise',
@@ -51,6 +52,7 @@ export const quizData = {
     {
       text:
         'Which city is called the "city of the future" because of its modern architecture?',
+      image: '/images/3.jpg',
       answers: {
         a: 'Maastricht',
         b: 'Rotterdam',
@@ -62,6 +64,7 @@ export const quizData = {
     },
     {
       text: 'What is the most popular Dutch supermarket chain?',
+      image: '/images/4.jpg',
       answers: {
         a: 'Jumbo',
         b: 'Albert Heijn',
@@ -74,6 +77,7 @@ export const quizData = {
     {
       text:
         'Which city is the political capital of the Netherlands, where the government is located?',
+      image: '/images/5.jpg',
       answers: {
         a: 'Amsterdam',
         b: 'Rotterdam',
@@ -85,6 +89,7 @@ export const quizData = {
     },
     {
       text: 'What is the most popular means of transport among locals?',
+      image: '/images/6.jpg',
       answers: {
         a: 'Bicycles',
         b: 'Buses',
@@ -96,6 +101,7 @@ export const quizData = {
     },
     {
       text: 'What is the name of the famous tulip park that opens in spring?',
+      image: '/images/7.jpg',
       answers: {
         a: 'Keukenhof',
         b: 'Vondelpark',
@@ -107,6 +113,7 @@ export const quizData = {
     },
     {
       text: 'Which of these cheeses are originally from the Netherlands?',
+      image: '/images/8.jpg',
       answers: {
         a: 'Cheddar',
         b: 'Limburger',
@@ -119,6 +126,7 @@ export const quizData = {
     {
       text:
         'Which Dutch city is famous for its canals and is often called "Little Amsterdam"?',
+      image: '/images/9.jpg',
       answers: {
         a: 'Utrecht',
         b: 'Haarlem',
@@ -130,6 +138,7 @@ export const quizData = {
     },
     {
       text: 'Which Dutch airport is one of the largest in Europe?',
+      image: '/images/10.jpg',
       answers: {
         a: 'Schiphol',
         b: 'Eindhoven',
@@ -142,6 +151,7 @@ export const quizData = {
     {
       text:
         'Which holiday is celebrated in the Netherlands on April 27, when everyone wears orange?',
+      image: '/images/11.jpg',
       answers: {
         a: 'Independence Day',
         b: 'Amsterdam Day',
