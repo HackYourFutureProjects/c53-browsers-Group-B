@@ -53,7 +53,7 @@ export const initQuestionPage = () => {
   const questionElement = createQuestionElement(
     currentQuestion.text,
     quizData.score,
-    quizData.currentQuestionIndex+1,
+    quizData.currentQuestionIndex + 1
   );
 
   userInterface.appendChild(questionElement);
