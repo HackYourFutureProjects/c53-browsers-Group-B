@@ -8,6 +8,7 @@ import { createQuestionElement } from '../views/questionView.js';
 import { createAnswerElement } from '../views/answerView.js';
 import { quizData } from '../data.js';
 import { initFinalResultPage } from './finalResultPage.js'; //  Import final result page
+import { saveQuizProgress } from '../data.js';
 
 function setStatusClass(element, correct) {
   if (correct) {
@@ -22,6 +23,7 @@ function selectAnswer(e, answersListElement) {
   const correct = selectedAnswer.parentElement.dataset.correct === 'true';
   quizData.questions[quizData.currentQuestionIndex].selected =
     selectedAnswer.id;
+    saveQuizProgress();
   if (correct) {
     quizData.score++;
   }
@@ -83,6 +85,7 @@ export const initQuestionPage = () => {
 
 const nextQuestion = () => {
   quizData.currentQuestionIndex++;
+  saveQuizProgress();
 
   if (quizData.currentQuestionIndex >= quizData.questions.length) {
     initFinalResultPage(); // Show results when finished
