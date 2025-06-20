@@ -7,7 +7,7 @@ import { SCORE_DISPLAY_ID } from '../constants.js';
  * @param {string} question - Question text
  * @param {number} score - Current score
  * @param {number} totalQuestions - Total number of questions in the quiz
-  * @param {number} questionNumber - The current question number (e.g. 1, 2, 3...)
+ * @param {number} questionNumber - The current question number (e.g. 1, 2, 3...)
  * @returns {Element}
  */
 export const createQuestionElement = (
@@ -16,7 +16,6 @@ export const createQuestionElement = (
   questionNumber,
   totalQuestions
 ) => {
-
   const element = document.createElement('div');
 
   //Add a number for h1 before a question
