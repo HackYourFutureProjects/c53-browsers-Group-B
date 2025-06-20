@@ -39,7 +39,7 @@ function selectAnswer(e, answersListElement) {
 
   const scoreDisplay = document.getElementById(SCORE_DISPLAY_ID);
   if (scoreDisplay) {
-    scoreDisplay.textContent = `Score: ${quizData.score}`;
+    scoreDisplay.textContent = `Score: ${quizData.score}/${quizData.questions.length}`;
   }
 }
 
@@ -53,7 +53,8 @@ export const initQuestionPage = () => {
   const questionElement = createQuestionElement(
     currentQuestion.text,
     quizData.score,
-    quizData.currentQuestionIndex + 1
+    quizData.currentQuestionIndex + 1,
+    quizData.questions.length
   );
 
   userInterface.appendChild(questionElement);
