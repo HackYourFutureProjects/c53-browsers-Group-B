@@ -30,15 +30,12 @@ export const createQuestionElement = (
   //Right: content
   const rightCol = document.createElement('div')
   rightCol.classList.add('question-right')
-
-
+  
   //Add a number for h1 before a question
   // I use String.raw just to get fancy colors for the HTML in VS Code.
   rightCol.innerHTML = String.raw`  
-    <h1>${questionNumber}. ${question.text}</h1>
+    <h2>${questionNumber}. ${question.text}</h2>
 
-    <!-- ${question.image ? `<img src="${question.image}" alt="Hint for ${question.text}" class="question-image">` : ''} -->
-${question.image ? `<img src="${question.image}" class="question-image">` : ''}
     <ul id="${ANSWERS_LIST_ID}">
     </ul>
 
