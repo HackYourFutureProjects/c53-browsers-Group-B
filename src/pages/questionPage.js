@@ -53,7 +53,7 @@ export const initQuestionPage = () => {
 
   // Create a question element, passing the current score
   const questionElement = createQuestionElement(
-    currentQuestion.text,
+    currentQuestion,
     quizData.score,
     quizData.currentQuestionIndex + 1,
     quizData.questions.length
