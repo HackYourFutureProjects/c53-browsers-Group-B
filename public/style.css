@@ -95,6 +95,7 @@ textarea:not([rows]) {
 /* O U R   S T Y L E S */
 body {
   background-color: #D2E0FE;
+color: white;
 }
 
 .centered {
@@ -113,6 +114,7 @@ body {
 
 ul {
   list-style: none;
+  padding: 0;
 }
 
 /* Correct and wrong answer styles */
@@ -141,37 +143,100 @@ ul {
 
 .question-wrapper {
   display: flex;
-  gap: 3rem;
+  gap: 30px;
+  padding: 20px;
   align-items: flex-start;
 }
 
 .question-left {
-  flex: 1 1 calc(50% - 16px);
   flex-direction: column;
 }
 
 .question-right {
-  flex: 1 1 calc(50% - 16px);
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   gap: 20px;
-  padding: 20px;
 }
 
 .question-right h2 {
   text-align: left;
 }
 
-.question-left img {
-  max-width: 100%;
+.question-image {
+  max-width: 300px;
+  height: 400px;
   border-radius: 10px;
   object-fit: cover;
 }
 
-.question-image {
-  max-width: 100%;
-  height: auto;
-  margin: 10px 0;
-  border-radius: 10px;
+/* For H1 */
+h1 {
+  font-family: "ADLaM Display", system-ui;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 40px;
+  line-height: auto;
+  letter-spacing: 0%;
+}
+
+/* For Paragraph on the welcome page */
+p {
+  font-family: "Abel", sans-serif;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: auto;
+  letter-spacing: 1%;
+}
+
+
+
+.question-title{
+  font-family: "Abel", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+    line-height: auto;
+  letter-spacing: 0%;
+  font-size: 36px;
+}
+
+#answers-list{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: flex-start;
+}
+
+#answers-list li{
+  width: 100%;
+}
+
+#next-question-button{
+  background-color: #20468B;
+  padding: 20px 30px;
+  color: white;
+  font-family: "Abel", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  outline: none;
+  border: none;
+  border-radius: 6px;
+}
+
+#a, #b, #c, #d {
+ font-family: "Abel", sans-serif;
+  font-weight: 400;
+  font-size:22px;
+}
+
+.button-content{
+  display: flex;
+  justify-content: space-between;
+  align-items: center; 
+  gap: 7px;
+}
+
+.arrow-svg{
+  width: 20px;
+
 }
