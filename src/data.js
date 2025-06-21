@@ -163,3 +163,19 @@ export const quizData = {
     },
   ],
 };
+const STORAGE_KEY = 'quiz-progress';
+
+export const saveQuizProgress = () => {
+  localStorage.setItem(STORAGE_KEY, JSON.stringify(quizData));
+};
+
+export const loadQuizProgress = () => {
+  const saved = localStorage.getItem(STORAGE_KEY);
+  if (saved) {
+    Object.assign(quizData, JSON.parse(saved));
+  }
+};
+
+export const clearQuizProgress = () => {
+  localStorage.removeItem(STORAGE_KEY); // Clear saved progress
+};

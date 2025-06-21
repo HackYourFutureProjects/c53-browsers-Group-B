@@ -2,6 +2,7 @@ import { USER_INTERFACE_ID } from '../constants.js';
 import { createFinalResultElement } from '../views/finalResultView.js';
 import { initWelcomePage } from './welcomePage.js';
 import { quizData } from '../data.js';
+import { clearQuizProgress } from '../data.js';
 
 export const initFinalResultPage = () => {
   const userInterface = document.getElementById(USER_INTERFACE_ID);
@@ -24,6 +25,7 @@ export const initFinalResultPage = () => {
       quizData.currentQuestionIndex = 0;
       quizData.score = 0;
       quizData.questions.forEach((q) => (q.selected = null));
+      clearQuizProgress(); // Clear saved progress
       initWelcomePage();
     });
 };
